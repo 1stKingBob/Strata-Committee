@@ -1,0 +1,20 @@
+
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "routes": [
+    { "src": "/(.*\\.(js|css|svg|png|jpg|jpeg|gif|ico))", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "regions": ["syd1"],
+  "env": {
+    "REACT_APP_API_URL": "https://api.example.com"
+  },
+  "crons": [
+    {
+      "path": "/api/scheduled-maintenance-reminder",
+      "schedule": "0 9 * * 1"
+    }
+  ]
+}
